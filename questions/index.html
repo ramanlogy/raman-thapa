@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discovery Questions · Legends Investment</title>
+<meta name="description" content="First-visit discovery questions for the Legends Investment website and rebrand.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d0e10" media="(prefers-color-scheme: dark)">
+<style>
+:root {
+  --bg: #fbfbfd;
+  --surface: #ffffff;
+  --ink: #1d1d1f;
+  --ink-soft: #6e6e73;
+  --line: #d9d9de;
+  --accent: #0f6e52;
+  --accent-ink: #ffffff;
+  --accent-soft: #e5f2ec;
+  --warn-soft: #fff4e0;
+  --warn-ink: #8a5a00;
+  --done: #9a9aa0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d0e10;
+    --surface: #1b1c1f;
+    --ink: #f5f5f7;
+    --ink-soft: #a1a1a6;
+    --line: #2e2f33;
+    --accent: #3fbf8f;
+    --accent-ink: #06231a;
+    --accent-soft: #12271f;
+    --warn-soft: #2a2110;
+    --warn-ink: #f0c27a;
+    --done: #6a6a70;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 64px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration: none; }
+.wrap { max-width: 680px; margin: 0 auto; padding: 0 18px; }
+
+/* Sticky top bar */
+.top {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.top-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 0; gap: 12px;
+}
+.brand { font-weight: 600; color: var(--ink); font-size: 15px; }
+.progress { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--ink-soft); }
+.bar { width: 90px; height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.bar i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .3s ease; }
+.reset { font-size: 13px; color: var(--ink-soft); background: none; border: 1px solid var(--line); border-radius: 99px; padding: 5px 11px; font-family: inherit; cursor: pointer; }
+
+/* Hero */
+.hero { padding: 28px 0 10px; }
+.kicker { margin: 0 0 6px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+h1 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; letter-spacing: -0.02em; font-weight: 700; }
+.lede { margin: 0; color: var(--ink-soft); font-size: 16px; }
+
+/* Facts */
+.facts {
+  margin: 20px 0 8px; padding: 16px 18px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+}
+.facts h2 { margin: 0 0 10px; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+.facts dl { margin: 0; display: grid; grid-template-columns: 1fr; gap: 8px 14px; font-size: 15px; }
+.facts dt { color: var(--ink-soft); font-size: 13px; }
+.facts dd { margin: 0 0 4px; }
+@media (min-width: 520px) { .facts dl { grid-template-columns: auto 1fr; } .facts dd { margin: 0; } }
+.note {
+  margin: 12px 0 0; padding: 12px 14px; border-radius: 12px;
+  background: var(--warn-soft); color: var(--warn-ink); font-size: 14px; line-height: 1.45;
+}
+
+/* Jump nav */
+.jump { display: flex; gap: 8px; overflow-x: auto; padding: 14px 0 6px; scrollbar-width: none; }
+.jump::-webkit-scrollbar { display: none; }
+.jump a {
+  flex: 0 0 auto; font-size: 13px; padding: 6px 12px; border-radius: 99px;
+  border: 1px solid var(--line); color: var(--ink); background: var(--surface); white-space: nowrap;
+}
+
+/* Sections */
+section.group { padding: 22px 0 6px; }
+.group-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+.group-head h2 { margin: 0; font-size: 20px; letter-spacing: -0.015em; font-weight: 700; }
+.group-head span { font-size: 13px; color: var(--ink-soft); }
+.why { margin: 0 0 10px; font-size: 14px; color: var(--ink-soft); }
+
+ol.q { list-style: none; margin: 0; padding: 0; }
+ol.q li { border-top: 1px solid var(--line); }
+ol.q li:last-child { border-bottom: 1px solid var(--line); }
+ol.q label {
+  display: grid; grid-template-columns: 30px 1fr; gap: 10px;
+  padding: 14px 2px; cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+ol.q input {
+  appearance: none; -webkit-appearance: none;
+  width: 24px; height: 24px; margin: 2px 0 0; border-radius: 8px;
+  border: 1.5px solid var(--line); background: var(--surface); position: relative; cursor: pointer;
+}
+ol.q input:checked { background: var(--accent); border-color: var(--accent); }
+ol.q input:checked::after {
+  content: ""; position: absolute; left: 7px; top: 3px; width: 6px; height: 12px;
+  border: solid var(--accent-ink); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg);
+}
+.qt { display: block; }
+.qt b { display: inline-block; color: var(--accent); font-weight: 600; margin-right: 6px; font-variant-numeric: tabular-nums; }
+.qs { display: block; margin-top: 3px; font-size: 14px; color: var(--ink-soft); }
+ol.q input:checked ~ .qt { color: var(--done); }
+ol.q input:checked ~ .qt .qs { color: var(--done); }
+ol.q input:checked ~ .qt b { color: var(--done); }
+
+/* Checklist */
+ul.take { list-style: none; margin: 0; padding: 0; }
+ul.take li { border-top: 1px solid var(--line); }
+ul.take li:last-child { border-bottom: 1px solid var(--line); }
+ul.take label { display: grid; grid-template-columns: 30px 1fr; gap: 10px; padding: 12px 2px; cursor: pointer; }
+ul.take input { appearance: none; -webkit-appearance: none; width: 24px; height: 24px; margin: 2px 0 0; border-radius: 8px; border: 1.5px solid var(--line); background: var(--surface); position: relative; }
+ul.take input:checked { background: var(--accent); border-color: var(--accent); }
+ul.take input:checked::after { content: ""; position: absolute; left: 7px; top: 3px; width: 6px; height: 12px; border: solid var(--accent-ink); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); }
+ul.take input:checked ~ span { color: var(--done); }
+
+/* Notes */
+.notes { margin-top: 10px; }
+.notes textarea {
+  width: 100%; min-height: 120px; padding: 12px 14px; font: inherit; font-size: 16px;
+  color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; resize: vertical;
+}
+.notes small { display: block; margin-top: 6px; color: var(--ink-soft); font-size: 13px; }
+
+footer { padding: 30px 0 48px; color: var(--ink-soft); font-size: 13px; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a href="/" class="brand">Raman Thapa</a>
+    <div class="progress">
+      <span id="count">0 / 0</span>
+      <div class="bar"><i id="barfill"></i></div>
+      <button class="reset" id="reset" type="button">Reset</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <p class="kicker">First visit · Discovery</p>
+    <h1>Legends Investment: questions to ask</h1>
+    <p class="lede">Tick each question as you cover it. Ticks and notes stay on this phone.</p>
+  </section>
+
+  <aside class="facts">
+    <h2>What I already know</h2>
+    <dl>
+      <dt>Names in use</dt><dd>Legends Investment Pvt. Ltd. (legal), Legends Property, Legends Properties, Legends Investment Group</dd>
+      <dt>Offices</dt><dd>Kamaladi, Kathmandu (head) and Bhaktapur</dd>
+      <dt>Managing Director</dt><dd>Rabin Chamling Rai</dd>
+      <dt>Chief Engineer</dt><dd>Er. Dinesh Pokharel</dd>
+      <dt>Ambassadors</dt><dd>Captain Vijay Lama and Rekha Thapa</dd>
+      <dt>Projects</dt><dd>Naya Gaon (Panchkhal, Kavre, ongoing), Chalnakhel (Dakshinkali, phase 2), Kalamasi Hills (Changunarayan, completed), Palanse / Rikhetar Pakho (Suryabinayak, completed), Sipadol Viral (Suryabinayak, completed)</dd>
+      <dt>Bank partners</dt><dd>Himalayan, Nabil, Global IME, Lumbini Bikas</dd>
+      <dt>Other partners</dt><dd>Subisu Cablenet MOU (fibre, WiFi, CCTV), Nic Vujicic Housing, Green Village Housing</dd>
+      <dt>Online</dt><dd>YouTube 15.1K subs, Instagram 570, Facebook, TikTok, X. Two domains serve one site. Instagram bio link is broken.</dd>
+      <dt>Audience they name</dt><dd>Ages 37 to 60, NRNs and returnees, bankers, doctors, professionals, families</dd>
+    </dl>
+    <p class="note">Frame the new site as the next phase, not a fix. The current site may have been built by a company connected to the MD. Praise what works (ambassador videos, blog, bank partners) before raising gaps.</p>
+  </aside>
+
+  <nav class="jump" aria-label="Sections">
+    <a href="#goals">Goals</a>
+    <a href="#projects">Projects</a>
+    <a href="#buyers">Buyers</a>
+    <a href="#brand">Brand</a>
+    <a href="#trust">Trust</a>
+    <a href="#content">Content</a>
+    <a href="#leads">Leads</a>
+    <a href="#accounts">Accounts</a>
+    <a href="#decision">Decision</a>
+    <a href="#take">Before leaving</a>
+  </nav>
+
+  <section class="group" id="goals">
+    <div class="group-head"><h2>Goals</h2><span>start here</span></div>
+    <p class="why">Get the one thing the site must do before talking about pages.</p>
+    <ol class="q">
+      <li><label><input type="checkbox" data-k="q1"><span class="qt"><b>1</b>In one sentence, what should a buyer believe about Legends after visiting the site?</span></label></li>
+      <li><label><input type="checkbox" data-k="q2"><span class="qt"><b>2</b>What matters most in the next 12 months: more enquiries, more NRN buyers, bank and investor confidence, or recruiting agents?<span class="qs">Listen for which project they mention first. That is the real priority.</span></span></label></li>
+      <li><label><input type="checkbox" data-k="q3"><span class="qt"><b>3</b>Where do most buyers hear about you today: Facebook, YouTube, TikTok, agents, referrals, hoardings, bank orientations?</span></label></li>
+      <li><label><input type="checkbox" data-k="q4"><span class="qt"><b>4</b>Roughly how many enquiries come in a month, and how many become site visits and sales?</span></label></li>
+      <li><label><input type="checkbox" data-k="q5"><span class="qt"><b>5</b>Who are your two or three main competitors, and what do they do online that you wish you did?</span></label></li>
+    </ol>
+  </section>
+
+  <section class="group" id="projects">
+    <div class="group-head"><h2>Projects</h2><span>inventory</span></div>
+    <p class="why">The site shows Palanse and Sipadol as all open, while marketing says 90% sold. Get the truth per project.</p>
+    <ol class="q">
+      <li><label><input type="checkbox" data-k="q6"><span class="qt"><b>6</b>For each of the five projects, what is the real status today: plots sold, booked and open?<span class="qs">Naya Gaon, Chalnakhel, Kalamasi Hills, Palanse, Sipadol.</span></span></label></li>
+      <li><label><input type="checkbox" data-k="q7"><span class="qt"><b>7</b>Which projects should stay on the site as proof of delivery, and which should be marked completed or removed?</span></label></li>
+      <li><label><input type="checkbox" data-k="q8"><span class="qt"><b>8</b>Do you want the plot map to show live availability, with lot number, facing, area and price, and a WhatsApp booking button?<span class="qs">The data already exists in their system. Ask who keeps it updated.</span></span></label></li>
+      <li><label><input type="checkbox" data-k="q9"><span class="qt"><b>9</b>What is launching next, and do you want a coming-soon page to collect early interest?</span></label></li>
+      <li><label><input type="checkbox" data-k="q10"><span class="qt"><b>10</b>Is Naya Gaon the flagship for the next year? Should the homepage lead with it?<span class="qs">145 plots, booking opened Dec 2025, Himalayan Bank financed.</span></span></label></li>
+      <li><label><input type="checkbox" data-k="q11"><span class="qt"><b>11</b>Do you build houses too, or sell plots only? If you build, should house designs and packages be shown?</span></label></li>
+    </ol>
+  </section>
+
+  <section class="group" id="buyers">
+    <div class="group-head"><h2>Buyers</h2><span>NRN and local</span></div>
+    <ol class="q">
+      <li><label><input type="checkbox" data-k="q12"><span class="qt"><b>12</b>What share of buyers are NRNs, and which countries are they mostly in?<span class="qs">Decides time zones, language, payment and virtual visit pages.</span></span></label></li>
+      <li><label><input type="checkbox" data-k="q13"><span class="qt"><b>13</b>How does a buyer abroad complete a purchase today: who signs, who holds power of attorney, how is payment made?</span></label></li>
+      <li><label><input type="checkbox" data-k="q14"><span class="qt"><b>14</b>Nepali and English, or English only?<span class="qs">Their best Nepali-language short outperformed most English project videos.</span></span></label></li>
+      <li><label><input type="checkbox" data-k="q15"><span class="qt"><b>15</b>What questions do buyers ask most often on the phone?<span class="qs">These become the FAQ and the project page content.</span></span></label></li>
+      <li><label><input type="checkbox" data-k="q16"><span class="qt"><b>16</b>Do bank loans and EMI matter to buyers? Should the site have a loan calculator tied to your four partner banks?</span></label></li>
+    </ol>
+  </section>
+
+  <section class="group" id="brand">
+    <div class="group-head"><h2>Brand and rebrand</h2><span>identity</span></div>
+    <p class="why">Four names are in use across the site, YouTube, Instagram and blogs. The rebrand starts with one name.</p>
+    <ol class="q">
+      <li><label><input type="checkbox" data-k="q17"><span class="qt"><b>17</b>Which name goes forward: Legends Investment, Legends Property, or something new?<span class="qs">Also settles which domain is primary. legendsinvestment.com.np and legendsproperty.com.np both serve the same site.</span></span></label></li>
+      <li><label><input type="checkbox" data-k="q18"><span class="qt"><b>18</b>Do you have a logo file, colours and fonts you want to keep, or should the identity start fresh?</span></label></li>
+      <li><label><input type="checkbox" data-k="q19"><span class="qt"><b>19</b>Three words for how the brand should feel: premium, trustworthy, family, modern, traditional, green, something else?</span></label></li>
+      <li><label><input type="checkbox" data-k="q20"><span class="qt"><b>20</b>Which brands, in real estate or outside it, do you admire visually?</span></label></li>
+      <li><label><input type="checkbox" data-k="q21"><span class="qt"><b>21</b>How prominent should Captain Vijay Lama and Rekha Thapa be? Do you have rights to use their photos and videos on the site and in ads?<span class="qs">Their videos get 10 to 40 times the views of plain project videos.</span></span></label></li>
+      <li><label><input type="checkbox" data-k="q22"><span class="qt"><b>22</b>Should the MD, chief engineer and team appear on the site with photos and a message?<span class="qs">There is no About or Leadership page today.</span></span></label></li>
+    </ol>
+  </section>
+
+  <section class="group" id="trust">
+    <div class="group-head"><h2>Trust and documents</h2><span>legal</span></div>
+    <ol class="q">
+      <li><label><input type="checkbox" data-k="q23"><span class="qt"><b>23</b>Which documents can be shown publicly per project: KVDA or municipal planning permit, lalpurja process, company registration?<span class="qs">Permit PDFs already exist for Palanse, Sipadol, Chalnakhel and Naya Gaon.</span></span></label></li>
+      <li><label><input type="checkbox" data-k="q24"><span class="qt"><b>24</b>Can we feature the existing video testimonials and bank partner logos as a proper trust section?</span></label></li>
+      <li><label><input type="checkbox" data-k="q25"><span class="qt"><b>25</b>Is there anything buyers worry about, or any past issue, that the site should answer head on?<span class="qs">Ask neutrally. Let them bring up specifics.</span></span></label></li>
+    </ol>
+  </section>
+
+  <section class="group" id="content">
+    <div class="group-head"><h2>Content and assets</h2><span>media</span></div>
+    <ol class="q">
+      <li><label><input type="checkbox" data-k="q26"><span class="qt"><b>26</b>What drone footage, photos and videos exist for each project, and who holds the originals?<span class="qs">Current cover images are small and some blog covers are AI-generated.</span></span></label></li>
+      <li><label><input type="checkbox" data-k="q27"><span class="qt"><b>27</b>Can we schedule a drone shoot at each site, and who on your team can walk us through?</span></label></li>
+      <li><label><input type="checkbox" data-k="q28"><span class="qt"><b>28</b>If we build a monthly progress timeline, who supplies the photos each month and can they commit to a date?</span></label></li>
+      <li><label><input type="checkbox" data-k="q29"><span class="qt"><b>29</b>Do you want the blog to continue, and who writes it?<span class="qs">34 posts so far, mostly market news and events.</span></span></label></li>
+    </ol>
+  </section>
+
+  <section class="group" id="leads">
+    <div class="group-head"><h2>Sales and leads</h2><span>process</span></div>
+    <ol class="q">
+      <li><label><input type="checkbox" data-k="q30"><span class="qt"><b>30</b>Where should website enquiries go: one WhatsApp number, a shared inbox, or agents by project?<span class="qs">The site lists two numbers and the email link opens a Gmail address.</span></span></label></li>
+      <li><label><input type="checkbox" data-k="q31"><span class="qt"><b>31</b>Who replies to enquiries, how fast, and would you use a simple lead dashboard with project, budget and country?</span></label></li>
+      <li><label><input type="checkbox" data-k="q32"><span class="qt"><b>32</b>Do you want virtual site visits by video call for buyers abroad, and who would run them?</span></label></li>
+    </ol>
+  </section>
+
+  <section class="group" id="accounts">
+    <div class="group-head"><h2>Site, accounts and social</h2><span>access</span></div>
+    <ol class="q">
+      <li><label><input type="checkbox" data-k="q33"><span class="qt"><b>33</b>Who owns the domains and hosting, and who built the current site? Can we get access or will we migrate?</span></label></li>
+      <li><label><input type="checkbox" data-k="q34"><span class="qt"><b>34</b>Who runs YouTube, Instagram, Facebook and TikTok today, and which gets real engagement?</span></label></li>
+      <li><label><input type="checkbox" data-k="q35"><span class="qt"><b>35</b>Do you have a Google Business profile and Google reviews for the Kamaladi and Bhaktapur offices?</span></label></li>
+    </ol>
+  </section>
+
+  <section class="group" id="decision">
+    <div class="group-head"><h2>Decision and budget</h2><span>close</span></div>
+    <ol class="q">
+      <li><label><input type="checkbox" data-k="q36"><span class="qt"><b>36</b>Who signs off on design and content, and how many people review each stage?</span></label></li>
+      <li><label><input type="checkbox" data-k="q37"><span class="qt"><b>37</b>Is there a launch date you are working toward, such as a festival season, an NRN event or the next project launch?</span></label></li>
+      <li><label><input type="checkbox" data-k="q38"><span class="qt"><b>38</b>Which of the three packages is closest to what you want, and should monthly content be part of it?</span></label></li>
+      <li><label><input type="checkbox" data-k="q39"><span class="qt"><b>39</b>After launch, will your team update projects and photos through an admin panel, or should we manage it?</span></label></li>
+    </ol>
+  </section>
+
+  <section class="group" id="take">
+    <div class="group-head"><h2>Ask for before leaving</h2><span>handover</span></div>
+    <ul class="take">
+      <li><label><input type="checkbox" data-k="t1"><span>Logo, brand files, brochures and hoarding designs</span></label></li>
+      <li><label><input type="checkbox" data-k="t2"><span>Project list with today's sold, booked and open counts</span></label></li>
+      <li><label><input type="checkbox" data-k="t3"><span>Approved layout drawings and a pin for each site</span></label></li>
+      <li><label><input type="checkbox" data-k="t4"><span>Existing drone footage, photos and ambassador videos</span></label></li>
+      <li><label><input type="checkbox" data-k="t5"><span>Permits and registration documents cleared for public use</span></label></li>
+      <li><label><input type="checkbox" data-k="t6"><span>Domain, hosting and social logins, or the name of who holds them</span></label></li>
+      <li><label><input type="checkbox" data-k="t7"><span>Name and number of the one person who will be my day-to-day contact</span></label></li>
+    </ul>
+    <div class="notes">
+      <textarea id="notes" placeholder="Notes from the meeting…"></textarea>
+      <small>Saved on this phone only.</small>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">Prepared by Raman Thapa · November 2026 · Private working page</footer>
+
+<script>
+(function () {
+  var KEY = 'legends-questions-v1';
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { state = {}; }
+
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('input[type=checkbox][data-k]'));
+  var qBoxes = boxes.filter(function (b) { return b.dataset.k.charAt(0) === 'q'; });
+  var count = document.getElementById('count');
+  var fill = document.getElementById('barfill');
+  var notes = document.getElementById('notes');
+
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+  function render() {
+    var done = qBoxes.filter(function (b) { return b.checked; }).length;
+    count.textContent = done + ' / ' + qBoxes.length;
+    fill.style.width = (qBoxes.length ? (done / qBoxes.length) * 100 : 0) + '%';
+  }
+
+  boxes.forEach(function (b) {
+    b.checked = !!state[b.dataset.k];
+    b.addEventListener('change', function () {
+      state[b.dataset.k] = b.checked;
+      save(); render();
+    });
+  });
+  notes.value = state.notes || '';
+  notes.addEventListener('input', function () { state.notes = notes.value; save(); });
+
+  document.getElementById('reset').addEventListener('click', function () {
+    if (!confirm('Clear all ticks and notes?')) return;
+    state = {};
+    boxes.forEach(function (b) { b.checked = false; });
+    notes.value = '';
+    save(); render();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

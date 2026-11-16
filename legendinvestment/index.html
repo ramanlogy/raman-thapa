@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Proposal · Legends Investment · Raman Thapa</title>
+<meta name="description" content="A website and online presence proposal for Legends Investment, with a live concept of the new site, prepared by Raman Thapa.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="A new home online for Legends Investment">
+<meta property="og:description" content="Concept site, interactive project map, monthly progress timeline and a plan for the full online presence.">
+<meta property="og:image" content="https://ramanthapa.com.np/legendinvestment/img/kalamasi.jpg">
+<link rel="preload" as="image" href="/legendinvestment/img/hero.jpg">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="/legendinvestment/legend.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <a href="/" class="top-logo">Raman Thapa</a>
+    <nav class="top-nav" aria-label="Proposal sections">
+      <a href="#research">Research</a>
+      <a href="#concept">Concept</a>
+      <a href="#projects">Projects</a>
+      <a href="#plan">Plan</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <a class="pill pill-dark top-cta" href="#contact">Book a call</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero shell">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">Proposal for Legends Investment</p>
+      <h1>Your land deserves to be <em>seen</em> before it is visited.</h1>
+      <p class="hero-sub">A premium website, live project map and monthly progress story for every Legends project, built for buyers at home and abroad.</p>
+      <div class="hero-ctas">
+        <a class="pill pill-accent" href="#concept">See the concept</a>
+        <a class="pill pill-ghost" href="#plan">Read the plan</a>
+      </div>
+    </div>
+    <figure class="hero-media reveal">
+      <div class="media media-tall" data-label="Kalamasi Hills from the air">
+        <img src="/legendinvestment/img/hero.jpg" alt="Kalamasi Hills plots and roads seen from a drone" width="864" height="1080" fetchpriority="high" onerror="this.parentNode.classList.add('noimg');this.remove()">
+      </div>
+      <div class="hero-float glass">
+        <span class="hero-float-num" data-count="5">5</span>
+        <span class="hero-float-label">projects across Bhaktapur, Kathmandu and Kavre</span>
+      </div>
+    </figure>
+  </section>
+
+  <!-- Research -->
+  <section id="research" class="research shell">
+    <h2 class="h2 reveal">What I learned about Legends.</h2>
+    <p class="lede reveal">From your own website, brochures and videos, plus public news coverage. I read all of it before writing a single line of this proposal.</p>
+
+    <div class="facts">
+      <div class="fact fact-big reveal">
+        <span class="fact-num">3 of 5</span>
+        <span class="fact-text">projects already completed: Rikhetar Pakho, Sipadol Viral and Kalamasi Hills. Chalnakhel and Naya Gaon are selling now.</span>
+      </div>
+      <div class="fact fact-img reveal">
+        <div class="media" data-label="Sipadol Viral">
+          <img src="/legendinvestment/img/sipadol.jpg" alt="Houses being built on Sipadol Viral plots" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()">
+        </div>
+        <span class="fact-cap">Sipadol Viral today. Houses are already going up, the best proof a buyer can see.</span>
+      </div>
+      <div class="fact reveal">
+        <span class="fact-num">145</span>
+        <span class="fact-text">plots planned at Naya Gaon, with a pool, café and villa designs.</span>
+      </div>
+      <div class="fact fact-tint reveal">
+        <span class="fact-text fact-quote">Chairman <strong>Pravin Kusma</strong>. Brand ambassador <strong>Captain Vijay Lama</strong>. Office in Kamaladi, Kathmandu.</span>
+      </div>
+      <div class="fact reveal">
+        <span class="fact-num">4</span>
+        <span class="fact-text">partner banks for home loans: Nabil, Global IME, Lumbini Bikas and Himalayan.</span>
+      </div>
+    </div>
+
+    <h3 class="h3 reveal">Your current website, honestly.</h3>
+    <div class="audit">
+      <article class="audit-item reveal">
+        <span class="audit-icon" aria-hidden="true">01</span>
+        <div>
+          <h4>Google sees an empty page</h4>
+          <p>The site arrives as a blank shell and draws everything with JavaScript afterwards. Search engines and link previews read only the title.</p>
+        </div>
+      </article>
+      <article class="audit-item reveal">
+        <span class="audit-icon" aria-hidden="true">02</span>
+        <div>
+          <h4>Two addresses, one site</h4>
+          <p>legendsinvestment.com.np and legendsproperty.com.np show the same pages. Google treats that as duplicate content and splits your ranking.</p>
+        </div>
+      </article>
+      <article class="audit-item reveal">
+        <span class="audit-icon" aria-hidden="true">03</span>
+        <div>
+          <h4>Numbers that disagree</h4>
+          <p>Rikhetar's text says 90% of plots are sold, while its live counter shows 0 sold of 30. Sipadol shows the same gap. A careful buyer notices.</p>
+        </div>
+      </article>
+      <article class="audit-item reveal">
+        <span class="audit-icon" aria-hidden="true">04</span>
+        <div>
+          <h4>Small typos, big signal</h4>
+          <p>"Real State" in the search keywords and "Secutiry" on the Sipadol cover image. Easy fixes that protect a premium brand.</p>
+        </div>
+      </article>
+      <article class="audit-item reveal">
+        <span class="audit-icon" aria-hidden="true">05</span>
+        <div>
+          <h4>No share preview</h4>
+          <p>No preview image or title is set, so a link shared on Facebook, Viber or WhatsApp shows up as plain text.</p>
+        </div>
+      </article>
+      <article class="audit-item reveal">
+        <span class="audit-icon" aria-hidden="true">06</span>
+        <div>
+          <h4>Great material, hidden away</h4>
+          <p>Drone videos, plot maps and the Naya Gaon renders exist, but sit inside PDFs and 24 MB video files most phones will not load.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Concept homepage -->
+  <section id="concept" class="concept">
+    <div class="shell">
+      <h2 class="h2 reveal">The new legendsinvestment.com.np</h2>
+      <p class="lede reveal">A working concept of the homepage, using your own drone footage. The map, progress timeline and calculator below are part of it too.</p>
+    </div>
+
+    <div class="browser reveal">
+      <div class="browser-bar">
+        <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="browser-url">legendsinvestment.com.np</span>
+      </div>
+      <div class="site">
+        <div class="site-nav">
+          <span class="site-brand"><span class="site-mark" aria-hidden="true">L</span>Legends Investment</span>
+          <span class="site-links"><a>Projects</a><a>Progress</a><a>For NRNs</a><a>Home loans</a></span>
+          <span class="pill pill-light site-wa">WhatsApp us</span>
+        </div>
+        <div class="site-hero">
+          <div class="media site-hero-media" data-label="Drone loop of Sipadol Viral">
+            <video class="site-hero-video" src="/legendinvestment/img/sipadol-loop.mp4" poster="/legendinvestment/img/sipadol-poster.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
+          </div>
+          <div class="site-hero-copy">
+            <h3>Own land in the valley.<br>Watch it grow from anywhere.</h3>
+            <p>Planned plots with pitched roads, drainage and street lights in Bhaktapur, Kathmandu and Kavre.</p>
+            <form class="site-search glass" onsubmit="return false">
+              <label><span>Project</span>
+                <select><option>All projects</option><option>Naya Gaon, Kavre</option><option>Chalnakhel, Kathmandu</option><option>Kalamasi Hills, Bhaktapur</option></select>
+              </label>
+              <label><span>Plot size</span>
+                <select><option>Any size</option><option>Under 6 aana</option><option>6 to 10 aana</option><option>Over 10 aana</option></select>
+              </label>
+              <button class="pill pill-accent" type="button">Find plots</button>
+            </form>
+          </div>
+        </div>
+        <div class="site-trust">
+          <span><strong>3 completed</strong> projects handed over</span>
+          <span><strong>8 m roads</strong> pitched, lit and drained</span>
+          <span><strong>4 banks</strong> ready with home loans</span>
+          <span><strong>Video visits</strong> for buyers abroad</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects + map -->
+  <section id="projects" class="projects shell">
+    <h2 class="h2 reveal">Every project, on one living map.</h2>
+    <p class="lede reveal">Tap a project to fly to it. Details come from your website today. Pins are close, and would use your exact Google Maps points in the real build.</p>
+
+    <div class="explorer reveal">
+      <div class="explorer-list" role="tablist" aria-label="Legends projects" id="projectList"></div>
+      <div class="explorer-stage">
+        <div id="map" class="map" aria-label="Map of Legends projects"></div>
+        <article class="detail glass" id="projectDetail" aria-live="polite"></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress timeline -->
+  <section id="progress" class="progress shell">
+    <h2 class="h2 reveal">Before, now and next. Month by month.</h2>
+    <p class="lede reveal">The strongest proof a buyer abroad can get. Each month we add a drone photo from the same spot and a short note, so progress is visible, not promised.</p>
+
+    <div class="progress-grid reveal">
+      <figure class="compare-wrap">
+        <div class="compare" id="compare">
+          <div class="media compare-after" data-label="This month's drone photo">
+            <img src="/legendinvestment/img/rikhetar.jpg" alt="Project site this month" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()">
+          </div>
+          <div class="media compare-before" data-label="First drone photo">
+            <img src="/legendinvestment/img/rikhetar.jpg" alt="" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()">
+          </div>
+          <span class="compare-tag compare-tag-l">Before</span>
+          <span class="compare-tag compare-tag-r">Now</span>
+          <input type="range" min="0" max="100" value="50" class="compare-range" aria-label="Drag to compare before and now" id="compareRange">
+          <span class="compare-handle" aria-hidden="true"></span>
+        </div>
+        <figcaption class="compare-cap">Drag to compare. In this demo the "before" side is a toned copy of the same photo. Monthly drone shots replace it.</figcaption>
+      </figure>
+
+      <div class="timeline">
+        <div class="timeline-head">
+          <label for="tlProject">Project</label>
+          <select id="tlProject"></select>
+        </div>
+        <ol class="timeline-steps" id="timelineSteps"></ol>
+        <p class="timeline-note">Sample milestones to show the format. Real dates come from your site team.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Film -->
+  <section class="film">
+    <div class="film-frame reveal" id="film">
+      <div class="media" data-label="Kalamasi Hills drone film">
+        <video id="filmVideo" src="/legendinvestment/img/kalamasi-film.mp4" poster="/legendinvestment/img/kalamasi.jpg" muted loop playsinline preload="none"></video>
+      </div>
+      <div class="film-copy">
+        <h2>Kalamasi Hills, from the air.</h2>
+        <p>This is your own footage. I cut it to 20 seconds and shrank it from 24 MB to 5 MB, so it plays on a phone in Dubai or Dolakha. Every project gets a film like this.</p>
+        <button class="play" type="button" id="filmPlay" aria-label="Play the Kalamasi Hills film" aria-pressed="false"><span></span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section id="calculator" class="calc shell">
+    <div class="calc-copy reveal">
+      <h2 class="h2">Ropani to square feet, in a second.</h2>
+      <p class="lede">Buyers abroad think in square feet and metres. A simple tool that converts and estimates cost keeps them on your site and gives them a reason to call.</p>
+    </div>
+    <div class="calc-card reveal">
+      <div class="calc-row">
+        <label>Ropani<input type="number" min="0" value="0" id="cRopani" inputmode="numeric"></label>
+        <label>Aana<input type="number" min="0" max="15" value="8" id="cAana" inputmode="numeric"></label>
+        <label>Paisa<input type="number" min="0" max="3" value="0" id="cPaisa" inputmode="numeric"></label>
+      </div>
+      <label class="calc-price">Price per aana (Rs.)<input type="number" min="0" step="50000" value="900000" id="cPrice" inputmode="numeric"></label>
+      <div class="calc-out">
+        <div><span id="oSqft">2,738</span><small>sq ft</small></div>
+        <div><span id="oSqm">254.4</span><small>sq m</small></div>
+        <div class="calc-total"><span id="oTotal">Rs. 72,00,000</span><small>estimated land cost</small></div>
+      </div>
+      <p class="calc-note">1 ropani = 16 aana = 5,476 sq ft. The price is an example input, not a Legends quote.</p>
+    </div>
+  </section>
+
+  <!-- Plan -->
+  <section id="plan" class="plan shell">
+    <h2 class="h2 reveal">The plan for your whole online presence.</h2>
+    <p class="lede reveal">The website is the centre. Everything else points people to it.</p>
+
+    <div class="bento">
+      <article class="tile tile-wide tile-img reveal">
+        <div class="media" data-label="Chalnakhel">
+          <img src="/legendinvestment/img/chalnakhel.jpg" alt="Chalnakhel plots and site office" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()">
+        </div>
+        <div class="tile-body">
+          <h3>A page for every project</h3>
+          <p>Gallery, plot map with live availability, road width, distances to Taudaha or Koteshwor, and a WhatsApp button that names the project.</p>
+        </div>
+      </article>
+      <article class="tile tile-accent reveal">
+        <h3>Found on Google</h3>
+        <p>One address, pages that load with real text, and a Google Business profile with reviews. So "land in Bhaktapur" finds you.</p>
+      </article>
+      <article class="tile reveal">
+        <h3>Trust, in writing</h3>
+        <p>Approval stage, lalpurja process and Malpot steps explained plainly, with documents shown on request.</p>
+      </article>
+      <article class="tile reveal">
+        <h3>Virtual site visits</h3>
+        <p>Book a video call from Dubai, Doha or Sydney. Your team walks the plot live on the phone.</p>
+      </article>
+      <article class="tile tile-tint reveal">
+        <h3>Monthly progress posts</h3>
+        <p>One drone shot becomes a site update, a Facebook post, an Instagram Reel and a WhatsApp broadcast.</p>
+      </article>
+      <article class="tile tile-img reveal">
+        <div class="media" data-label="Naya Gaon pool render">
+          <img src="/legendinvestment/img/nayagaon-pool.jpg" alt="Naya Gaon swimming pool render" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()">
+        </div>
+        <div class="tile-body">
+          <h3>A launch page for Naya Gaon</h3>
+          <p>The pool, café, villas and gemstone plot categories deserve more than a PDF.</p>
+        </div>
+      </article>
+      <article class="tile tile-wide tile-dark reveal">
+        <h3>Leads that do not get lost</h3>
+        <p>Every enquiry from the site, WhatsApp and Facebook lands in one simple dashboard with the project, budget and country, so your team follows up the same day.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section class="roadmap shell">
+    <h2 class="h2 reveal">From first call to launch in about eight weeks.</h2>
+    <ol class="road">
+      <li class="reveal"><span class="road-week">Week 1 to 2</span><strong>Visit and gather</strong><p>Site visits, original drone files, exact map pins and current plot status.</p></li>
+      <li class="reveal"><span class="road-week">Week 3 to 4</span><strong>Design</strong><p>Homepage and project page designs, reviewed with you twice.</p></li>
+      <li class="reveal"><span class="road-week">Week 5 to 7</span><strong>Build</strong><p>Website, map, progress timeline, calculator and admin panel.</p></li>
+      <li class="reveal"><span class="road-week">Week 8</span><strong>Launch</strong><p>Go live on one address, Google setup, team training, first monthly update.</p></li>
+    </ol>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="pricing shell">
+    <h2 class="h2 reveal">Three ways to start.</h2>
+    <p class="lede reveal">Each is a full custom build, not a template. Domain and hosting are billed at cost.</p>
+
+    <div class="plans">
+      <article class="plan-card reveal">
+        <h3>Essential</h3>
+        <p class="plan-price">Rs. 60,000</p>
+        <p class="plan-for">A fast, findable site that shows every project well.</p>
+        <ul>
+          <li>Custom design, up to 8 pages</li>
+          <li>A page for each project with gallery</li>
+          <li>Google Maps for every project</li>
+          <li>WhatsApp, call and Facebook buttons</li>
+          <li>Search-ready pages and share previews</li>
+          <li>1 month support</li>
+        </ul>
+      </article>
+      <article class="plan-card plan-featured reveal">
+        <span class="plan-flag">Recommended</span>
+        <h3>Signature</h3>
+        <p class="plan-price">Rs. 1,20,000</p>
+        <p class="plan-for">Everything in this concept, run by your team.</p>
+        <ul>
+          <li>Everything in Essential</li>
+          <li>Interactive project map</li>
+          <li>Monthly progress timeline with before and now</li>
+          <li>Video section and ropani calculator</li>
+          <li>Admin panel for projects, photos and updates</li>
+          <li>Enquiry inbox with project and country</li>
+          <li>3 months support</li>
+        </ul>
+      </article>
+      <article class="plan-card reveal">
+        <h3>Flagship</h3>
+        <p class="plan-price">Rs. 2,00,000+</p>
+        <p class="plan-for">For a full NRN sales channel.</p>
+        <ul>
+          <li>Everything in Signature</li>
+          <li>Plot-level map with available and sold plots</li>
+          <li>Virtual visit booking with calendar</li>
+          <li>Buyer login with documents and payment schedule</li>
+          <li>Nepali and English versions</li>
+          <li>6 months support</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="retainer reveal">
+      <div>
+        <h3>Monthly progress and content</h3>
+        <p>Drone photo, site update, one Reel and one post per active project, every month.</p>
+      </div>
+      <p class="retainer-price">Rs. 15,000<span>per month, optional</span></p>
+    </div>
+  </section>
+
+  <!-- Needs -->
+  <section class="needs shell">
+    <h2 class="h2 reveal">What I would need from your team.</h2>
+    <div class="needs-grid">
+      <div class="need reveal"><h3>Original drone files</h3><p>Full-quality videos and photos. I used compressed copies from your site for this concept.</p></div>
+      <div class="need reveal"><h3>Today's plot status</h3><p>Sold, booked and open plots per project, so the site and the counters agree.</p></div>
+      <div class="need reveal"><h3>Approval documents</h3><p>What you are happy to show buyers, and what stays on request.</p></div>
+      <div class="need reveal"><h3>One main address</h3><p>Which domain stays as home. The other will redirect to it.</p></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-cta shell reveal">
+    <h2>Let's make Legends the name buyers trust online.</h2>
+    <p>A 30 minute call to walk through this concept with your team.</p>
+    <a class="pill pill-accent pill-lg" href="mailto:ramanthapa160@gmail.com?subject=Legends%20Investment%20website">Book a call</a>
+    <p class="contact-meta">Prepared by Raman Thapa for Legends Investment, November 2026.</p>
+  </section>
+
+</main>
+
+<footer class="foot shell">
+  <p>© 2026 Raman Thapa. Project details, photos, renders and video come from Legends Investment's own website and brochures, used here only to show the concept. Leadership details from ICT Frame, March 2025.</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="/legendinvestment/legend.js"></script>
+</body>
+</html>
