@@ -412,22 +412,6 @@ section { padding-top: 120px; }
 .road strong { display: block; font-size: 19px; letter-spacing: -0.015em; }
 .road p { margin-top: 6px; font-size: 15px; color: var(--ink-soft); }
 
-/* Pricing */
-.plans { margin-top: 56px; display: grid; grid-template-columns: 1fr 1.1fr 1fr; gap: 16px; align-items: stretch; }
-.plan-card { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 32px 28px; display: flex; flex-direction: column; }
-.plan-featured { border: 2px solid var(--accent); box-shadow: var(--shadow); transform: translateY(-12px); }
-.plan-flag { position: absolute; top: -13px; left: 28px; background: var(--accent); color: var(--accent-ink); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 999px; }
-.plan-card h3 { font-size: 20px; }
-.plan-price { margin-top: 12px; font-size: 34px; font-weight: 700; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
-.plan-for { margin-top: 6px; font-size: 14px; color: var(--ink-soft); min-height: 42px; }
-.plan-card ul { list-style: none; margin: 20px 0 0; padding: 20px 0 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; }
-.plan-card li { position: relative; padding-left: 24px; font-size: 15px; }
-.plan-card li::before { content: ""; position: absolute; left: 2px; top: 6px; width: 10px; height: 6px; border-left: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(-45deg); }
-.retainer { margin-top: 16px; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 28px 32px; border-radius: var(--r-lg); background: var(--accent-soft); }
-.retainer h3 { font-size: 19px; }
-.retainer p { color: var(--ink-soft); font-size: 15px; margin-top: 4px; }
-.retainer-price { font-size: 26px !important; font-weight: 700; color: var(--ink) !important; letter-spacing: -0.02em; text-align: right; white-space: nowrap; }
-.retainer-price span { display: block; font-size: 13px; font-weight: 400; color: var(--ink-soft); }
 
 /* Needs */
 .needs-grid { margin-top: 40px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
@@ -518,10 +502,6 @@ section { padding-top: 120px; }
   .film-copy { padding: 28px; }
   .bento { grid-template-columns: 1fr; }
   .tile-wide { grid-column: auto; }
-  .plans { grid-template-columns: 1fr; }
-  .plan-featured { transform: none; order: -1; }
-  .retainer { flex-direction: column; align-items: flex-start; }
-  .retainer-price { text-align: left; }
   .road, .needs-grid { grid-template-columns: 1fr; }
   .calc-card { padding: 22px; }
 }
