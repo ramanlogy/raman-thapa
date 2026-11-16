@@ -241,6 +241,12 @@ section h2 {
   color: var(--ink-soft);
 }
 
+.about .about-cv {
+  margin-top: 14px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
 /* Buttons */
 
 .btn {

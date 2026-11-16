@@ -1,0 +1,399 @@
+/* CV page — shares tokens with style.css */
+
+.cv-page {
+  --sheet-width: 860px;
+}
+
+/* Toolbar */
+
+.cv-toolbar {
+  border-bottom: 1px solid var(--line);
+  background: var(--card-bg);
+}
+
+.cv-toolbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.cv-toolbar-note {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.cv-toolbar-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.cv-toolbar .btn {
+  font-size: 14px;
+  padding: 9px 18px;
+  border: 1px solid var(--ink);
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+.cv-toolbar .btn:hover {
+  border-color: var(--accent);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line) !important;
+}
+
+.btn-ghost:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+/* Sheet */
+
+.cv-wrap {
+  padding: 40px 24px 56px;
+}
+
+.cv-sheet {
+  max-width: var(--sheet-width);
+  margin: 0 auto;
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 48px 52px;
+}
+
+/* Head */
+
+.cv-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.cv-name {
+  font-size: 34px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.cv-role {
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+
+.cv-contact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+}
+
+.cv-contact a {
+  color: var(--ink);
+}
+
+.cv-contact a:hover {
+  color: var(--accent);
+}
+
+/* Sections */
+
+.cv-section {
+  margin-top: 28px;
+}
+
+.cv-section h2 {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 14px;
+}
+
+.cv-summary p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.cv-columns {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  column-gap: 44px;
+}
+
+/* Items (experience, education) */
+
+.cv-item + .cv-item {
+  margin-top: 20px;
+}
+
+.cv-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.cv-item h3 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.cv-when {
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.cv-where {
+  margin: 3px 0 0;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.cv-note {
+  margin: 6px 0 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.cv-bullets {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.cv-bullets li + li {
+  margin-top: 4px;
+}
+
+/* Projects */
+
+.cv-projects {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-projects li + li {
+  margin-top: 14px;
+}
+
+.cv-project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.cv-project-head h3 {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.cv-project-head h3 a {
+  color: var(--ink);
+}
+
+.cv-project-head h3 a:hover {
+  color: var(--accent);
+}
+
+.cv-tag {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.cv-projects p {
+  margin: 3px 0 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+/* Sidebar */
+
+.cv-skills {
+  margin: 0;
+}
+
+.cv-skills dt {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 10px;
+}
+
+.cv-skills dt:first-child {
+  margin-top: 0;
+}
+
+.cv-skills dd {
+  margin: 2px 0 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.cv-plain {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+.cv-plain strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Foot */
+
+.cv-foot {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.cv-foot p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+/* Mobile */
+
+@media (max-width: 720px) {
+  .cv-toolbar-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cv-toolbar-actions {
+    justify-content: space-between;
+  }
+
+  .cv-wrap {
+    padding: 20px 16px 40px;
+  }
+
+  .cv-sheet {
+    padding: 28px 22px;
+    border-radius: 14px;
+  }
+
+  .cv-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .cv-name {
+    font-size: 30px;
+  }
+
+  .cv-contact {
+    text-align: left;
+  }
+
+  .cv-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-item-head,
+  .cv-project-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}
+
+/* Print — A4, clean sheet */
+
+@page {
+  size: A4;
+  margin: 14mm 14mm 16mm;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  html, body {
+    background: #fff;
+    font-size: 11.5pt;
+  }
+
+  .cv-wrap {
+    padding: 0;
+  }
+
+  .cv-sheet {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .cv-name {
+    font-size: 26pt;
+  }
+
+  .cv-columns {
+    grid-template-columns: 1fr 58mm;
+    column-gap: 10mm;
+  }
+
+  .cv-section {
+    margin-top: 16pt;
+  }
+
+  .cv-item,
+  .cv-projects li,
+  .cv-skills dd {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .cv-section h2 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  a {
+    color: inherit;
+  }
+}
